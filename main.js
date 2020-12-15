@@ -10,6 +10,11 @@ let app = new Vue({
       "https://static.photocdn.pt/images/articles/2017/04/28/iStock-546424192.jpg",
     ],
   },
+
+  mounted: function () {
+    this.timingSlide();
+  },
+
   methods: {
     next: function() {
       this.counter++;
@@ -23,7 +28,7 @@ let app = new Vue({
         this.counter = this.images.length - 1;
       }
     },
-    timing: function(){
+    timingSlide(){
       this.timer == setInterval(this.next,2000);
     }
   },
